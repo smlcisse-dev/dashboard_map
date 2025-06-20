@@ -66,12 +66,12 @@
           </div>
           
           <div class="space-y-4">
-            <div>
+            <!-- <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Coordinates</label>
               <p class="text-sm text-gray-600">
                 {{ selectedLocation.data.latitude }}, {{ selectedLocation.data.longitude }}
               </p>
-            </div>
+            </div> -->
             
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Distance</label>
