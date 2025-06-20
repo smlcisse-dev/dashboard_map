@@ -215,14 +215,14 @@ const initializeMap = () => {
   })
   
   // Add route line
-  const routeLine = L.polyline([
-    [departureLocation.latitude, departureLocation.longitude],
-    [arrivalLocation.latitude, arrivalLocation.longitude]
-  ], {
-    color: '#3b82f6',
-    weight: 3,
-    opacity: 0.8
-  }).addTo(map)
+  // const routeLine = L.polyline([
+  //   [departureLocation.latitude, departureLocation.longitude],
+  //   [arrivalLocation.latitude, arrivalLocation.longitude]
+  // ], {
+  //   color: '#3b82f6',
+  //   weight: 3,
+  //   opacity: 0.8
+  // }).addTo(map)
   
   // Fit map to show both markers
   const group = new L.featureGroup([departureMarker, arrivalMarker])
