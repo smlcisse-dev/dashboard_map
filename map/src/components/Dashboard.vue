@@ -35,21 +35,6 @@
         <p class="text-gray-600">Track your delivery routes and calculate distances</p>
       </div>
 
-      <!-- Calculate Price Button -->
-      <div class="mb-6">
-        <button
-          @click="calculatePrice"
-          :disabled="loading"
-          class="btn-primary flex items-center"
-        >
-          <div v-if="loading" class="loading-spinner mr-2"></div>
-          <svg v-else class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-          </svg>
-          {{ loading ? 'Calculating...' : 'Calculate Price & Load Route' }}
-        </button>
-      </div>
-
       <!-- Error Message -->
       <div v-if="error" class="mb-6 bg-red-50 border border-red-200 rounded-lg p-4">
         <div class="flex items-center">
@@ -261,8 +246,10 @@ const initializeMap = () => {
 
 onMounted(() => {
   // Set axios default header if token exists
-  if (authStore.token) {
-    axios.defaults.headers.common['Authorization'] = `Bearer ${authStore.token}`
-  }
+  // if (authStore.token) {
+  //   axios.defaults.headers.common['Authorization'] = `Bearer ${authStore.token}`
+  // }
+  
+  calculatePrice()
 })
 </script>
